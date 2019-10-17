@@ -12,6 +12,32 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Decent Memories for a Less than Ideal Day!</h1>
+      <h2 id="message"></h2>
+      <h2 id='sign-up-header'>Sign Up</h2>
+      <form id="sign-up">
+      <input type="email" name="credentials[email]" placeholder="Email address">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password" class="blur">
+      <button class="blur">Sign Up</button> <!--need to add button type='submit'-->
+      </form>
+      <br id='after-sign-up'>
+      <h2 id='sign-in-header'>Sign In</h2>
+      <form id="sign-in">
+      <input type="email" name="credentials[email]" placeholder="Email address">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <button>Sign In</button>
+      </form>
+      <br id='after-sign-in'>
+      <h2 id="change-password-header" class="no-display">Change Password</h2>
+      <form id="change-password" class="no-display">
+      <input type="password" name="passwords[old]" placeholder="Enter old password">
+      <input type="password" name="passwords[new]" placeholder="Enter new password" class="blur">
+      <button class="no-display blur">Change Password</button>
+      </form>
+    <!-- line break not needed <br id="after-change-password" class="no-display">-->
+      <h2 id="sign-out-header" class="no-display">Sign-Out</h2>
+      <button id="sign-out" class="no-display">Sign-Out</button>
+      <br id="after-sign-out" class="no-display">
     </body>
 </html>
