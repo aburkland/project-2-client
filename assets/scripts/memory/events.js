@@ -1,22 +1,23 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store')
-
-// tictactoe example code
-// const onCreateGame = function (event) {
-//   event.preventDefault()
-//   $('.box').text('') // is this really clearing game?
-//   currentPlayer = 'X'
-//   api.createGame()
-//     .then(ui.onCreateGameSuccess)
-//     .catch(ui.onCreateGameFailure)
-// }
+const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateMemory = function (event) {
   event.preventDefault()
-  api.createMemory()
+  console.log('made it to the onCreateMemory function')
+  const form = event.target
+
+  const formData = getFormFields(form)
+  api.createMemory(formData) // need to add arguments, define them, and leave comments about what they are
     // .then(ui.onCreateGameSuccess)
     // .catch(ui.onCreateGameFailure)
-    .then(console.log('reached createMemory', event))
-    .catch(console.log('not reaching createMemory'))
+    .then((response) => {
+      console.log('here', response)
+    })
+    .catch(console.error)
+}
+
+module.exports = {
+  onCreateMemory
 }
