@@ -19,11 +19,13 @@ const failureMessage = function (newText) {
 const onCreateMemorySuccess = function (responseData) {
   successMessage('New memory created successfully!')
   store.memory = responseData.memory
+  $('#create-memory').trigger('reset')
   // console.log(responseData)
 }
 
 const onCreateMemoryFailure = function () {
   failureMessage('New memory creation failed')
+  // $('#create-memory').trigger('reset')
 }
 
 module.exports = {
