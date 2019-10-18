@@ -10,12 +10,12 @@ const onCreateMemory = function (event) {
 
   const formData = getFormFields(form)
   api.createMemory(formData) // need to add arguments, define them, and leave comments about what they are
-    // .then(ui.onCreateGameSuccess)
-    // .catch(ui.onCreateGameFailure)
-    .then((response) => {
-      console.log('here', response)
-    })
-    .catch(console.error)
+    .then(ui.onCreateMemorySuccess)
+    .catch(ui.onCreateMemoryFailure)
+    // .then((response) => {
+    //   console.log('here', response)
+    // })
+    // .catch(console.error)
 }
 
 module.exports = {
