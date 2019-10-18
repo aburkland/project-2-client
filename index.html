@@ -12,8 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Decent Memories for a Less than Ideal Day!</h1>
-      <h2 id="message"></h2>
+      <h1>Decent memories for your shi*** day!</h1>
+      <br id="after-h1">
+      <h4 id="message"></h4>
       <h2 id='sign-up-header'>Sign Up</h2>
       <form id="sign-up">
       <input type="email" name="credentials[email]" placeholder="Email address">
@@ -31,10 +32,11 @@
       <br id='after-sign-in'>
       <h2 id="change-password-header" class="no-display">Change Password</h2>
       <form id="change-password" class="no-display">
-      <input type="password" name="passwords[old]" placeholder="Enter old password">
-      <input type="password" name="passwords[new]" placeholder="Enter new password" class="blur">
+      <input type="password" name="passwords[old]" placeholder="Current password">
+      <input type="password" name="passwords[new]" placeholder="Set new password" class="blur">
       <button class="no-display blur">Change Password</button>
       </form>
+      <br id='after-change-password'>
     <!-- line break not needed <br id="after-change-password" class="no-display">-->
       <h2 id="sign-out-header" class="no-display">Sign-Out</h2>
       <button id="sign-out" class="no-display">Sign-Out</button>
