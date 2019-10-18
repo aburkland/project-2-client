@@ -1,4 +1,6 @@
 'use strict'
+const authEvents = require('./auth/events')
+// const memoryEvents = require('./memory/events')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
