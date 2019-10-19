@@ -42,15 +42,19 @@
       <button id="sign-out" class="no-display">Sign-Out</button>
       <br id="after-sign-out" class="no-display">
       <h2 class="no-display">Create a memory that's not terrible!</h2>
-      <br id="after-memory-header">
-      <h4 id="memory-message"></h4>
+      <!-- <br id="after-memory-header"> -->
+      <div id="memory-message"></div>
       <form id="create-memory"> <!--add class no-display-->
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
       <input type="date" name="memory[date]" required>
-      <textarea rows="4" cols="50" name="memory[description]" form="create-memory" placeholder="Your decent memory goes here" required></textarea>
+      <br>
+      <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="create-memory" placeholder="Your decent memory goes here" required></textarea>
       <br>
       <button class="blur btn btn-primary">Create Memory</button> <!--need to add button type='submit'-->
       </form>
+      <h2 class="no-display">View all of your OK memories</h2>
+      <div id="view-all-memories" class="no-display"></div>
+      <button id="view-all-memories-button" class="no-display">Retrieve</button>
       <!-- <textarea rows="4" cols="50" id="memory-text" form="create-memory" placeholder="Your decent memory goes here"></textarea> -->
     </body>
 </html>

@@ -14,6 +14,16 @@ const createMemory = function (formData) {
   })
 }
 
+const getAllMemories = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/memories',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 module.exports = {
-  createMemory
+  createMemory,
+  getAllMemories
 }

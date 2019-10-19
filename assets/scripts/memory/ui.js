@@ -17,6 +17,8 @@ const failureMessage = function (newText) {
 }
 
 const onCreateMemorySuccess = function (responseData) {
+  // may need to remove successMessage and target html element where success
+  // message should appear
   successMessage('New memory created successfully!')
   store.memory = responseData.memory
   $('#create-memory').trigger('reset')
@@ -24,13 +26,25 @@ const onCreateMemorySuccess = function (responseData) {
 }
 
 const onCreateMemoryFailure = function () {
+  // may need to remove successMessage and target html element where failure
+  // message should appear
   failureMessage('New memory creation failed')
   // $('#create-memory').trigger('reset')
+}
+
+const onGetAllMemoriesSuccess = function (response) {
+  $('#view-all-memories').text(response.memories)
+}
+
+const onGetAllMemoriesFailure = function () {
+  $('#view-all-memories').text('Memory history retrieval failed')
 }
 
 module.exports = {
   successMessage,
   failureMessage,
   onCreateMemorySuccess,
-  onCreateMemoryFailure
+  onCreateMemoryFailure,
+  onGetAllMemoriesSuccess,
+  onGetAllMemoriesFailure
 }

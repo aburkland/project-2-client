@@ -18,6 +18,17 @@ const onCreateMemory = function (event) {
     // .catch(console.error)
 }
 
+const onGetAllMemories = function () {
+  event.preventDefault()
+  api.getAllMemories()
+    // .then((response) => {
+    //   console.log('here', response)
+    // })
+    .then(ui.onGetAllMemoriesSuccess)
+  // .catch(ui.onGetGamesFailure)
+}
+
 module.exports = {
-  onCreateMemory
+  onCreateMemory,
+  onGetAllMemories
 }

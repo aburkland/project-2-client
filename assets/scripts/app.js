@@ -14,4 +14,5 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#create-memory').on('submit', memoryEvents.onCreateMemory)
+  $('#view-all-memories-button').on('click', memoryEvents.onGetAllMemories)
 })
