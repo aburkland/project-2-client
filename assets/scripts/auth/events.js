@@ -4,7 +4,6 @@ const api = require('./api.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  // $('.box').text('') - this is from tictactoe
   $('.blur').blur()
   const form = event.target
 
@@ -17,7 +16,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  // $('.box').text('') - this is from tictactoe
   const form = event.target
 
   const formData = getFormFields(form)
@@ -41,7 +39,6 @@ const onChangePassword = function (event) {
 }
 
 const onSignOut = function (event) {
-  // $('.box').text('') - need to reset game vs just clear text
   event.preventDefault()
   api.signOut()
     .then(ui.onSignOutSuccess)

@@ -1,11 +1,10 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
-const store = require('../store')
+// const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateMemory = function (event) {
   event.preventDefault()
-  console.log('made it to the onCreateMemory function')
   const form = event.target
 
   const formData = getFormFields(form)
@@ -27,6 +26,8 @@ const onGetAllMemories = function () {
     .then(ui.onGetAllMemoriesSuccess)
   // .catch(ui.onGetGamesFailure)
 }
+
+// will maybe need to require store if i want to retrieve a memory just saved
 
 module.exports = {
   onCreateMemory,

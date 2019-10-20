@@ -11,6 +11,7 @@ const signUp = function (formData) {
   })
 }
 
+// AJAX call to signIn endpoint on server
 const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
@@ -19,6 +20,7 @@ const signIn = function (formData) {
   })
 }
 
+// AJAX call to changePassword endpoint on server
 const changePassword = function (formData) {
   return $.ajax({
     method: 'PATCH',
@@ -30,6 +32,7 @@ const changePassword = function (formData) {
   })
 }
 
+// AJAX call to signOut endpoint on server
 const signOut = function () {
   return $.ajax({
     method: 'DELETE',

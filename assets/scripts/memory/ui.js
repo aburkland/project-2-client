@@ -33,7 +33,11 @@ const onCreateMemoryFailure = function () {
 }
 
 const onGetAllMemoriesSuccess = function (response) {
-  $('#view-all-memories').text(response.memories)
+  // $('#view-all-memories').text(response.memories)
+  // put forEach function - for each memory, i want to append memory values
+  response.memories.forEach(memory => {
+    $('#view-all-memories').append('<p>' + memory.title + '</p>')
+  })
 }
 
 const onGetAllMemoriesFailure = function () {

@@ -2,7 +2,7 @@
 const config = require('../config.js')
 const store = require('../store')
 
-// create a new memory
+// AJAX call to createMemory endpoint on server
 const createMemory = function (formData) {
   return $.ajax({
     method: 'POST',
@@ -14,6 +14,7 @@ const createMemory = function (formData) {
   })
 }
 
+// AJAX call to getAllMemories endpoint on server
 const getAllMemories = function () {
   return $.ajax({
     method: 'GET',
@@ -23,6 +24,7 @@ const getAllMemories = function () {
     }
   })
 }
+
 module.exports = {
   createMemory,
   getAllMemories
