@@ -35,13 +35,19 @@ const onCreateMemoryFailure = function () {
 const onGetAllMemoriesSuccess = function (response) {
   // $('#view-all-memories').text(response.memories)
   // put forEach function - for each memory, i want to append memory values
+  $('#view-all-memories').text('')
   response.memories.forEach(memory => {
-    $('#view-all-memories').append('<p>' + memory.title + '</p>')
+    // $('#view-all-memories').append('<div id=' + memory.id + '</div>')
+    $('#view-all-memories').append('<p>' + 'ID: ' + memory.id + '</p>')
+    $('#view-all-memories').append('<p>' + 'Title: ' + memory.title + '</p>')
+    $('#view-all-memories').append('<p>' + 'Date of memory: ' + memory.date + '</p>')
+    $('#view-all-memories').append('<p>' + 'Description: ' + memory.description + '</p>')
   })
+  successMessage('Your memories are displayed below')
 }
 
 const onGetAllMemoriesFailure = function () {
-  $('#view-all-memories').text('Memory history retrieval failed')
+  failureMessage('Memory history retrieval failed')
 }
 
 module.exports = {

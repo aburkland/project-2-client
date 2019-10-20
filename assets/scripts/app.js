@@ -15,4 +15,6 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#create-memory').on('submit', memoryEvents.onCreateMemory)
   $('#view-all-memories-button').on('click', memoryEvents.onGetAllMemories)
+  // $('#clear-all-memories-button').on('click', memoryEvents.onClearAllMemories)
+  $('#update-memory').on('submit', memoryEvents.onUpdateMemory)
 })
