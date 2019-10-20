@@ -46,28 +46,37 @@
       <div id="memory-message"></div>
       <form id="create-memory"> <!--add class no-display-->
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
-      <input type="date" name="memory[date]" required>
+      <!-- put min or max for date below -->
+      <input type="date" name="memory[date]" min="1900-01-01" required>
       <br>
       <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="create-memory" placeholder="Your decent memory goes here" required></textarea>
       <br>
       <button class="blur btn btn-primary">Create Memory</button> <!--need to add button type='submit'-->
       </form>
       <h2 class="no-display">View all of your OK memories</h2>
-      <div id="view-all-memories-message" class="no-display"></div>
+      <!-- <div id="view-all-memories-message" class="no-display"></div> -->
       <div id="view-all-memories" class="no-display"></div>
       <button id="view-all-memories-button" class="no-display">Retrieve</button>
       <!-- <button id="clear-all-memories-button" class="no-display">Clear</button> -->
       <!-- <textarea rows="4" cols="50" id="memory-text" form="create-memory" placeholder="Your decent memory goes here"></textarea> -->
       <h2 class="no-display">Update an OK memory</h2>
+      <!-- should only be able to update after get all is run -->
       <!-- <div id="update-memory-message" class="no-display"></div> -->
       <form id="update-memory"> <!--add class no-display-->
-      <input type="number" name="memory[id]" placeholder="Memory ID" required>
+      <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
-      <input type="date" name="memory[date]" required>
+      <!-- put min and max for date below -->
+      <input type="date" name="memory[date]" min="1900-01-01" required>
       <br>
       <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="update-memory" placeholder="Your decent memory update goes here" required></textarea>
       <br>
-      <button id="update-memory-button" class="no-display">Update</button>
+      <button id="update-memory-button" class="no-display">Update this memory</button>
+      </form>
+      <br>
+      <h2 class="no-display">Delete an OK memory</h2>
+      <form id="delete-memory"> <!--add class no-display-->
+      <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
+      <button id="delete-memory-button" class="no-display btn btn-danger">Delete this memory</button>
       </form>
     </body>
 </html>

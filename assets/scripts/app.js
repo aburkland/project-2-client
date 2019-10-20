@@ -17,4 +17,5 @@ $(() => {
   $('#view-all-memories-button').on('click', memoryEvents.onGetAllMemories)
   // $('#clear-all-memories-button').on('click', memoryEvents.onClearAllMemories)
   $('#update-memory').on('submit', memoryEvents.onUpdateMemory)
+  $('#delete-memory').on('submit', memoryEvents.onDeleteMemory)
 })

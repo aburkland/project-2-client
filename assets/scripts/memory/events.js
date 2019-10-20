@@ -8,6 +8,7 @@ const onCreateMemory = function (event) {
   const form = event.target
   // below is assigning form field input data to a variable
   const formData = getFormFields(form)
+  console.log(formData)
   api.createMemory(formData)
     .then(ui.onCreateMemorySuccess)
     .catch(ui.onCreateMemoryFailure)
@@ -24,7 +25,7 @@ const onGetAllMemories = function () {
     //   console.log('here', response)
     // })
     .then(ui.onGetAllMemoriesSuccess)
-  // .catch(ui.onGetGamesFailure)
+    .catch(ui.onGetAllMemoriesFailure)
 }
 
 const onUpdateMemory = function (event) {
@@ -33,12 +34,26 @@ const onUpdateMemory = function (event) {
   // below is assigning form field input data to a variable
   const formData = getFormFields(form)
   api.updateMemory(formData)
-    // .then(ui.onCreateMemorySuccess)
-    // .catch(ui.onCreateMemoryFailure)
-    .then((response) => {
-      console.log('here', response)
-    })
-    .catch(console.error)
+    .then(ui.onUpdateMemorySuccess)
+    .catch(ui.onUpdateMemoryFailure)
+    // .then((response) => {
+    //   console.log('response is', response)
+    // })
+    // .catch(console.error)
+}
+
+const onDeleteMemory = function (event) {
+  event.preventDefault()
+  const form = event.target
+  // below is assigning form field input data to a variable
+  const formData = getFormFields(form)
+  api.deleteMemory(formData)
+    .then(ui.onDeleteMemorySuccess)
+    .catch(ui.onDeleteMemoryFailure)
+    // .then((response) => {
+    //   console.log('response is', response)
+    // })
+    // .catch(console.error)
 }
 
 // will maybe need to require store if i want to retrieve a memory just saved
@@ -46,5 +61,6 @@ const onUpdateMemory = function (event) {
 module.exports = {
   onCreateMemory,
   onGetAllMemories,
-  onUpdateMemory
+  onUpdateMemory,
+  onDeleteMemory
 }
