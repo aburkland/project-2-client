@@ -3,12 +3,18 @@ const store = require('../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
@@ -16,8 +22,6 @@ const failureMessage = function (newText) {
 const onSignUpSuccess = function () {
   successMessage('Your sign-up was successful.')
   $('#sign-up').trigger('reset')
-  // mimic .removeClass and .addClass for no-display and yes-display classes
-  // which target an id element instead of the above .no-display class with .hide
 }
 
 const onSignUpFailure = function () {

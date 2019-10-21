@@ -8,23 +8,20 @@
 - [Link to Deployed API](https://desolate-badlands-44499.herokuapp.com)
 
 ## Planning and Development Process
-For my first project as part of General Assembly's Software Engineering Immersive,
-I built a single page application that allows a person to create a user account
-in order to play a game of tic-tac-toe.
+For my second project as part of General Assembly's Software Engineering Immersive,
+I built a full-stack application single page application that allows a user to sign up, sign in, change password, sign out, create a memory, update a memory, view all of their saved memories, and delete a memory.
 
 I began by reviewing the project requirements and project documentation. I then
 created my wireframes and user stories to help guide me in my project schedule.
-I started by setting up my authentication with the API and then moved on to
-developing my game logic. I tried to break problems down into bite-sized pieces,
-using pseudocode and comments along the way. I would test features by logging
-messages to the console to help me discern where roadblocks and bugs were
-occuring.
+I started by setting up my API, using curl scripts to test. I then moved on to
+developing my front-end, testing along the way in order to identify bugs and incrementally update code to address the errors.
 
 ## Technologies Used
 - Javascript
 - JQuery
 - HTML5
 - CSS
+- SASS
 - Bootstrap
 - Ruby on Rails
 - postgreSQL
@@ -46,14 +43,8 @@ occuring.
 - As a signed-in user, after I display all memories, I can delete a memory, targeting it by the memory ID.
 
 ## Unsolved Problems for Future Fixes
-I created an error message to appear when there were complications with
-updating the API, but I believe this will confuse the user. I hope to better
-understand the process for creating error messages that are useful. Additionally,
-my 'New Game' button must be clicked in order to play a game; in the future, I
-would like the user to be able to start a game by clicking on the game board.
-Lastly, I was focused on meeting the project requirements and thus did not
-focus on styling; I would like to add a Bootstrap template and add more
-formatting.
+I would like to transform the JSON date string to be more readable for the client.
+I would also like to set a maximum of today's date for the memory input fields, since a memory record should not have a future date.
 
 ## [License](LICENSE)
 

@@ -8,7 +8,7 @@ const onCreateMemory = function (event) {
   const form = event.target
   // below is assigning form field input data to a variable
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
   api.createMemory(formData)
     .then(ui.onCreateMemorySuccess)
     .catch(ui.onCreateMemoryFailure)
