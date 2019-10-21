@@ -30,9 +30,10 @@ occuring.
 - postgreSQL
 
 ## Entity Relationship Diagrams
-![memory saver ERD](https://flic.kr/p/2hyuhWm "MemorySaver understand")
+![memory saver ERD](https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg "MemorySaver understand")
 
 ## Wireframes
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/184743707@N07/48938048816/in/dateposted-public/" title="20191021_160623"><img src="https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg" width="1536" height="2048" alt="20191021_160623"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 ![memory saver wireframes](https://flic.kr/p/2hyvg42 "MemorySaver wireframes")
 ![memory saver wireframes2](https://live.staticflickr.com/65535/48823772213_668a2daf21.jpg "MemorySaver wireframes2")
 
