@@ -16,7 +16,6 @@ const failureMessage = function (newText) {
 const onSignUpSuccess = function () {
   successMessage('Your sign-up was successful.')
   $('#sign-up').trigger('reset')
-  // $('.no-display').hide()
   // mimic .removeClass and .addClass for no-display and yes-display classes
   // which target an id element instead of the above .no-display class with .hide
 }
@@ -31,16 +30,6 @@ const onSignInSuccess = function (responseData) {
   successMessage('You are signed in!')
   store.user = responseData.user // the user object containing the user token
   $('#sign-in').trigger('reset')
-  //  example $("p").hide();
-  // $('#sign-in').trigger('reset')
-  // $('#sign-in').hide()
-  // $('#sign-in-header').hide()
-  // $('#after-sign-in').hide()
-  // $('#sign-up').hide()
-  // $('#sign-up-header').hide()
-  // $('#after-sign-up').hide()
-  // $('.no-display').show()
-  // $('.no-start-display').removeClass('no-start-display')
   $('.no-start-display').show()
   $('.yes-start-display').hide()
 }
@@ -53,7 +42,6 @@ const onSignInFailure = function () {
 const onChangePasswordSuccess = function () {
   successMessage('Changed password successfully!')
   $('#change-password').trigger('reset')
-  // $('#game-message').text('')
 }
 
 const onChangePasswordFailure = function () {
@@ -63,15 +51,6 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage('You successfully signed out. Sign in to relieve your anxiety!')
-  // $('.box').text('')
-  // $('#message').text('')
-  // $('.no-display').hide()
-  // $('#sign-in').show()
-  // $('#sign-in-header').show()
-  // $('#after-sign-in').show()
-  // $('#sign-up').show()
-  // $('#sign-up-header').show()
-  // $('#after-sign-up').show()
   $('.no-start-display').hide()
   $('.yes-start-display').show()
   $('.no-display-until-view-all').hide()

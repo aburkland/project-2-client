@@ -6,56 +6,23 @@ $light-blue: #ade;
 $red: #f00;
 
 body {
-  border: 2px solid black;
+  border: 2px solid $black;
   text-align: center;
 }
-
-// .box {
-//   align-items: center;
-//   background-color: $light-blue;
-//   border: 1px solid $black;
-//   display: flex;
-//   height: 80px;
-//   justify-content: center;
-// }
 
 .failure {
   color: $red;
 }
-
-// .game-board-container {
-//   max-width: 1700px;
-//   min-width: 300px;
-//   width: 50%;
-//
-// }
-// .yes-start-display {
-//   display: flex;
-// }
 
 .no-start-display,
 .no-display-until-view-all {
   display: none;
 }
 
-// .no-display-until-view-all {
-//   display: none;
-// }
-
 .success {
   color: $green;
 }
 
-// .yes-display-after-sign-in {
-//   display: block;
-//   text-align: center;
-// }
-//
-// .yes-display-after-view-all {
-//   display: block;
-//   text-align: center;
-// }
-//
 .yes-start-display {
   display: block;
   text-align: center;
