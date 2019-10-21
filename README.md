@@ -30,12 +30,11 @@ occuring.
 - postgreSQL
 
 ## Entity Relationship Diagrams
-![memory saver ERD](https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg "MemorySaver understand")
+![memory saver ERD](https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg "MemorySaver ERD")
 
 ## Wireframes
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/184743707@N07/48938048816/in/dateposted-public/" title="20191021_160623"><img src="https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg" width="1536" height="2048" alt="20191021_160623"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-![memory saver wireframes](https://flic.kr/p/2hyvg42 "MemorySaver wireframes")
-![memory saver wireframes2](https://live.staticflickr.com/65535/48823772213_668a2daf21.jpg "MemorySaver wireframes2")
+![memory saver wireframes](https://live.staticflickr.com/65535/48938237587_50b6c31828_c.jpg "MemorySaver wireframes")
+![memory saver wireframes2](https://live.staticflickr.com/65535/48937505218_40458a0e24_c.jpg "MemorySaver wireframes2")
 
 ## User Stories
 - As a user, when I enter a complete email, password, and password confirmation, I can create an account.
