@@ -34,9 +34,13 @@ const onCreateMemoryFailure = function () {
 }
 
 const onGetAllMemoriesSuccess = function (responseData) {
-  // $('#view-all-memories').text(response.memories)
-  // put forEach function - for each memory, i want to append memory values
+  // clear all text before showing memories or memories messaging
   $('#view-all-memories-message').text('')
+  // if there are no memories, send a message to create a memory
+  if (responseData.memories.length === 0) {
+    $('#view-all-memories-message').text('You have zero good memories. Better create one first!')
+  }
+  // put forEach function - for each memory, i want to append memory values
   responseData.memories.forEach(memory => {
     // responseData.memries is an array of memory objects
     // $('#view-all-memories').append('<div id=' + memory.id + '</div>')

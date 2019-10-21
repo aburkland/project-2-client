@@ -27,6 +27,7 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (responseData) {
+  // console.log(responseData)
   successMessage('You are signed in!')
   store.user = responseData.user // the user object containing the user token
   $('#sign-in').trigger('reset')
