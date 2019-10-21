@@ -16,7 +16,7 @@ const failureMessage = function (newText) {
 const onSignUpSuccess = function () {
   successMessage('Your sign-up was successful.')
   $('#sign-up').trigger('reset')
-  $('.no-display').hide()
+  // $('.no-display').hide()
   // mimic .removeClass and .addClass for no-display and yes-display classes
   // which target an id element instead of the above .no-display class with .hide
 }
@@ -29,15 +29,22 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('You are signed in!')
   store.user = responseData.user // the user object containing the user token
-  //  example $("p").hide();
   $('#sign-in').trigger('reset')
-  $('#sign-in').hide()
-  $('#sign-in-header').hide()
-  $('#after-sign-in').hide()
-  $('#sign-up').hide()
-  $('#sign-up-header').hide()
-  $('#after-sign-up').hide()
-  $('.no-display').show()
+  //  example $("p").hide();
+  // $('#sign-in').trigger('reset')
+  // $('#sign-in').hide()
+  // $('#sign-in-header').hide()
+  // $('#after-sign-in').hide()
+  // $('#sign-up').hide()
+  // $('#sign-up-header').hide()
+  // $('#after-sign-up').hide()
+  // $('.no-display').show()
+  // $('.no-start-display').removeClass('no-start-display')
+  $('.no-start-display').addClass('yes-display-after-sign-in')
+  // $('.yes-start-display').removeClass('yes-start-display')
+  // $('.yes-start-display').addClass('no-display-after-sign-in')
+  // $('yes-start-display').removeClass('yes-start-display')
+  // $('yes-start-display').removeClass('yes-start-display')
 }
 
 const onSignInFailure = function () {
@@ -60,13 +67,13 @@ const onSignOutSuccess = function () {
   successMessage('You successfully signed out. Sign in to relieve your anxiety!')
   // $('.box').text('')
   $('#game-message').text('')
-  $('.no-display').hide()
-  $('#sign-in').show()
-  $('#sign-in-header').show()
-  $('#after-sign-in').show()
-  $('#sign-up').show()
-  $('#sign-up-header').show()
-  $('#after-sign-up').show()
+  // $('.no-display').hide()
+  // $('#sign-in').show()
+  // $('#sign-in-header').show()
+  // $('#after-sign-in').show()
+  // $('#sign-up').show()
+  // $('#sign-up-header').show()
+  // $('#after-sign-up').show()
 }
 
 const onSignOutFailure = function () {
