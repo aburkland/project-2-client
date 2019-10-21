@@ -40,11 +40,8 @@ const onSignInSuccess = function (responseData) {
   // $('#after-sign-up').hide()
   // $('.no-display').show()
   // $('.no-start-display').removeClass('no-start-display')
-  $('.no-start-display').addClass('yes-display-after-sign-in')
-  // $('.yes-start-display').removeClass('yes-start-display')
-  // $('.yes-start-display').addClass('no-display-after-sign-in')
-  // $('yes-start-display').removeClass('yes-start-display')
-  // $('yes-start-display').removeClass('yes-start-display')
+  $('.no-start-display').show()
+  $('.yes-start-display').hide()
 }
 
 const onSignInFailure = function () {
@@ -66,7 +63,7 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function () {
   successMessage('You successfully signed out. Sign in to relieve your anxiety!')
   // $('.box').text('')
-  $('#game-message').text('')
+  // $('#message').text('')
   // $('.no-display').hide()
   // $('#sign-in').show()
   // $('#sign-in-header').show()
@@ -74,6 +71,17 @@ const onSignOutSuccess = function () {
   // $('#sign-up').show()
   // $('#sign-up-header').show()
   // $('#after-sign-up').show()
+  $('.no-start-display').hide()
+  $('.yes-start-display').show()
+  $('.no-display-until-view-all').hide()
+  $('#create-memory').trigger('reset')
+  $('#update-memory').trigger('reset')
+  $('#delete-memory').trigger('reset')
+  $('#change-password').trigger('reset')
+  $('#view-all-memories-message').text('')
+  $('#memory-message').text('')
+  $('#update-memory-message').text('')
+  $('#delete-memory-message').text('')
 }
 
 const onSignOutFailure = function () {

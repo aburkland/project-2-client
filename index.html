@@ -16,32 +16,31 @@
       <br id="after-h1">
       <h4 id="message"></h4>
       <h2 id='sign-up-header' class="yes-start-display">Sign Up</h2>
-      <form id="sign-up">
+      <form id="sign-up" class="yes-start-display">
       <input type="email" name="credentials[email]" placeholder="Email address">
       <input type="password" name="credentials[password]" placeholder="Password">
       <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password" class="blur">
-      <button class="blur">Sign Up</button> <!--need to add button type='submit'-->
+      <button class="blur btn btn-primary">Sign Up</button> <!--need to add button type='submit'-->
       </form>
-      <br id='after-sign-up'>
-      <h2 id='sign-in-header'>Sign In</h2>
-      <form id="sign-in">
+      <br id='after-sign-up' class="yes-start-display">
+      <h2 id='sign-in-header' class="yes-start-display">Sign In</h2>
+      <form id="sign-in" class="yes-start-display">
       <input type="email" name="credentials[email]" placeholder="Email address">
       <input type="password" name="credentials[password]" placeholder="Password">
-      <button>Sign In</button>
+      <button class="btn btn-primary">Sign In</button>
       </form>
-      <br id='after-sign-in'>
+      <br id='after-sign-in'class="yes-start-display">
       <h2 id="change-password-header" class="no-start-display">Change Password</h2>
       <form id="change-password" class="no-start-display">
       <input type="password" name="passwords[old]" placeholder="Current password">
       <input type="password" name="passwords[new]" placeholder="Set new password" class="blur">
-      <button class="no-display blur">Change Password</button>
+      <button class="no-display blur btn btn-primary">Change Password</button>
       </form>
       <br id='after-change-password' class="no-start-display">
     <!-- line break not needed <br id="after-change-password" class="no-display">-->
       <h2 id="sign-out-header" class="no-start-display">Sign-Out</h2>
       <div class="sign-out-button-container">
-      <button id="sign-out" class="no-start-display">Sign-Out</button>
-      <p>test</p>
+      <button id="sign-out" class="no-start-display btn btn-primary">Sign-Out</button>
       </div>
       <br id="after-sign-out" class="no-start-display">
       <h2 class="no-start-display">Create a memory that's not terrible</h2>
@@ -56,15 +55,19 @@
       <br>
       <button class="blur btn btn-primary">Create Memory</button> <!--need to add button type='submit'-->
       </form>
+      <br class="no-start-display">
       <h2 class="no-start-display">View all of your OK memories</h2>
       <!-- <div id="view-all-memories-message" class="no-display"></div> -->
-      <div id="view-all-memories" class="no-start-display"></div>
-      <button id="view-all-memories-button" class="no-start-display">Retrieve</button>
+      <div id="view-all-memories-message" class="no-start-display"></div>
+      <button id="view-all-memories-button" class="no-start-display btn btn-primary">Retrieve All Of Your Memories</button>
+      <br class="no-start-display">
+      <br class="no-start-display">
       <!-- <button id="clear-all-memories-button" class="no-display">Clear</button> -->
       <!-- <textarea rows="4" cols="50" id="memory-text" form="create-memory" placeholder="Your decent memory goes here"></textarea> -->
       <h2 class="no-display-until-view-all">Update an OK memory</h2>
       <!-- should only be able to update after get all is run -->
       <!-- <div id="update-memory-message" class="no-display"></div> -->
+      <div id="update-memory-message" class="no-display-until-view-all"></div>
       <form id="update-memory" class=no-display-until-view-all> <!--add class no-display-->
       <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
@@ -73,10 +76,11 @@
       <br>
       <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="update-memory" placeholder="Your decent memory update goes here" required></textarea>
       <br>
-      <button id="update-memory-button" class="no-display">Update this memory</button>
+      <button id="update-memory-button" class="no-display btn btn-primary">Update this memory</button>
       </form>
-      <br>
+      <br class="no-display-until-view-all">
       <h2 class="no-display-until-view-all">Delete an OK memory</h2>
+      <div id="delete-memory-message" class="no-display-until-view-all"></div>
       <form id="delete-memory" class=no-display-until-view-all> <!--add class no-display-->
       <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
       <button id="delete-memory-button" class="no-display btn btn-danger">Delete this memory</button>

@@ -36,36 +36,47 @@ const onCreateMemoryFailure = function () {
 const onGetAllMemoriesSuccess = function (responseData) {
   // $('#view-all-memories').text(response.memories)
   // put forEach function - for each memory, i want to append memory values
-  $('#view-all-memories').text('')
+  $('#view-all-memories-message').text('')
   responseData.memories.forEach(memory => {
+    // responseData.memries is an array of memory objects
     // $('#view-all-memories').append('<div id=' + memory.id + '</div>')
-    $('#view-all-memories').append('<p>' + 'ID: ' + memory.id + '</p>')
-    $('#view-all-memories').append('<p>' + 'Title: ' + memory.title + '</p>')
-    $('#view-all-memories').append('<p>' + 'Date of memory: ' + memory.date + '</p>')
-    $('#view-all-memories').append('<p>' + 'Description: ' + memory.description + '</p>')
+    $('#view-all-memories-message').append('<p>' + 'ID: ' + memory.id + '</p>')
+    $('#view-all-memories-message').append('<p>' + 'Title: ' + memory.title + '</p>')
+    $('#view-all-memories-message').append('<p>' + 'Date of memory: ' + memory.date + '</p>')
+    $('#view-all-memories-message').append('<p>' + 'Description: ' + memory.description + '</p>')
   })
-  successMessage('Your memories are displayed below')
   store.memories = responseData.memories
-  console.log(store.memory)
+  console.log(store.memories)
+  $('.no-display-until-view-all').show()
 }
 
 const onGetAllMemoriesFailure = function () {
-  failureMessage('Memory history retrieval failed')
+  $('#view-all-memories-message').text('Memory history retrieval failed')
 }
 
 const onUpdateMemorySuccess = function (responseData) {
-  successMessage('Memory updated successfully!')
+  // successMessage('Memory updated successfully!')
+  // $('#update-memory-message').txt('Memory updated successfully')
+  $('#update-memory-message').text('Memory updated successfully')
+  $('#update-memory-message').removeClass('failure').addClass('success')
   $('#update-memory').trigger('reset')
 }
+
 const onUpdateMemoryFailure = function () {
-  failureMessage('Memory update failed')
+  // failureMessage('Memory update failed')
+  $('#update-memory-message').text('Memory update failed')
+  $('#update-memory-message').removeClass('success').addClass('failure')
+  // $('#update-memory').trigger('reset') don't clear forms if failure
 }
+
 const onDeleteMemorySuccess = function (responseData) {
-  successMessage('Memory deleted successfully. Please replace ASAP!')
-  $('#update-memory').trigger('reset')
+  $('#delete-memory-message').text('Memory deleted successfully. Please replace before depression takes over.')
+  $('#delete-memory-message').removeClass('failure').addClass('success')
+  $('#delete-memory').trigger('reset')
 }
 const onDeleteMemoryFailure = function () {
-  failureMessage('Memory deletion failed')
+  $('#delete-memory-message').text('Memory deletion failed')
+  $('#delete-memory-message').removeClass('success').addClass('failure')
 }
 
 module.exports = {

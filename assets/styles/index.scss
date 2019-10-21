@@ -34,33 +34,28 @@ body {
 // }
 
 .no-start-display,
-.no-display-until-view-all,
-.no-display-after-sign-in {
+.no-display-until-view-all {
   display: none;
-  text-align: center;
 }
 
 // .no-display-until-view-all {
 //   display: none;
 // }
-.sign-out-button-container {
-  text-align: center;
-}
 
 .success {
   color: $green;
 }
 
-.yes-display-after-sign-in {
-  display: block;
-  text-align: center;
-}
-
-.yes-display-after-view-all {
-  display: block;
-  text-align: center;
-}
-
+// .yes-display-after-sign-in {
+//   display: block;
+//   text-align: center;
+// }
+//
+// .yes-display-after-view-all {
+//   display: block;
+//   text-align: center;
+// }
+//
 .yes-start-display {
   display: block;
   text-align: center;
