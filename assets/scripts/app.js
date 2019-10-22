@@ -34,4 +34,5 @@ $(() => {
   $('#delete-memory').on('submit', memoryEvents.onDeleteMemory)
   document.getElementById('today-date-max-create').setAttribute('max', todayDate)
   document.getElementById('today-date-max-update').setAttribute('max', todayDate)
+  // could use getElementsByClassName('max-date') to remove above duplication
 })
