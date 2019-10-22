@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Memory Saver</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <br>
+      <h1>Good Memories for Your Less than Ideal Day</h1>
+      <h3>Now You Can Save and Review Your Memories</h3>
+      <br>
+      <h4 id="message"></h4>
+      <h2 id='sign-up-header' class="yes-start-display">Sign Up</h2>
+      <form id="sign-up" class="yes-start-display">
+      <input type="email" name="credentials[email]" placeholder="Email address">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password" class="blur">
+      <button class="blur btn btn-primary">Sign Up</button>
+      </form>
+      <br class="yes-start-display">
+      <h2 id='sign-in-header' class="yes-start-display">Sign In</h2>
+      <form id="sign-in" class="yes-start-display">
+      <input type="email" name="credentials[email]" placeholder="Email address">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <button class="btn btn-primary">Sign In</button>
+      </form>
+      <br class="yes-start-display">
+      <h2 id="change-password-header" class="no-start-display">Change Password</h2>
+      <form id="change-password" class="no-start-display">
+      <input type="password" name="passwords[old]" placeholder="Current password">
+      <input type="password" name="passwords[new]" placeholder="Set new password" class="blur">
+      <button class="no-display blur btn btn-primary">Change Password</button>
+      </form>
+      <br class="no-start-display">
+      <h2 id="sign-out-header" class="no-start-display">Sign-Out</h2>
+      <button id="sign-out" class="no-start-display btn btn-primary">Sign-Out</button>
+      <br class="no-start-display">
+      <br class="no-start-display">
+      <h2 class="no-start-display">Create a memory</h2>
+      <!-- <br id="after-memory-header"> -->
+      <div id="memory-message" class="no-start-display"></div>
+      <form id="create-memory" class="no-start-display"> <!--add class no-display-->
+      <input type="text" name="memory[title]" placeholder="Name your memory" required>
+      <!-- put min or max for date below -->
+      <input id="today-date-max-create" type="date" name="memory[date]" min="1900-01-01" required>
+      <br>
+      <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="create-memory" placeholder="Your decent memory goes here" required></textarea>
+      <br>
+      <button class="blur btn btn-primary">Create Memory</button> <!--need to add button type='submit'-->
+      </form>
+      <br class="no-start-display">
+      <h2 class="no-start-display">View all of your memories</h2>
+      <!-- <div id="view-all-memories-message" class="no-display"></div> -->
+      <div id="view-all-memories-message" class="no-start-display"></div>
+      <button id="view-all-memories-button" class="no-start-display btn btn-primary">Retrieve All Of Your Memories</button>
+      <br class="no-start-display">
+      <br class="no-start-display">
+      <!-- <button id="clear-all-memories-button" class="no-display">Clear</button> -->
+      <!-- <textarea rows="4" cols="50" id="memory-text" form="create-memory" placeholder="Your decent memory goes here"></textarea> -->
+      <h2 class="no-display-until-view-all">Update a memory</h2>
+      <!-- should only be able to update after get all is run -->
+      <!-- <div id="update-memory-message" class="no-display"></div> -->
+      <div id="update-memory-message" class="no-display-until-view-all"></div>
+      <form id="update-memory" class=no-display-until-view-all> <!--add class no-display-->
+      <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
+      <input type="text" name="memory[title]" placeholder="Name your memory" required>
+      <!-- put min and max for date below -->
+      <input id="today-date-max-update" type="date" name="memory[date]" min="1900-01-01" required>
+      <br>
+      <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="update-memory" placeholder="Your decent memory update goes here" required></textarea>
+      <br>
+      <button id="update-memory-button" class="no-display btn btn-primary">Update this memory</button>
+      </form>
+      <br class="no-display-until-view-all">
+      <h2 class="no-display-until-view-all">Delete a memory</h2>
+      <div id="delete-memory-message" class="no-display-until-view-all"></div>
+      <form id="delete-memory" class=no-display-until-view-all> <!--add class no-display-->
+      <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
+      <button id="delete-memory-button" class="no-display btn btn-danger">Delete this memory</button>
+      </form>
+      <br class="no-display-until-view-all">
+    </body>
+</html>
