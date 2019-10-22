@@ -51,10 +51,10 @@ const onGetAllMemoriesSuccess = function (responseData) {
   responseData.memories.forEach(memory => {
     // responseData.memries is an array of memory objects
     $('#view-all-memories-message').removeClass('failure')
-    $('#view-all-memories-message').append('<p>' + 'ID: ' + memory.id + '</p>')
-    $('#view-all-memories-message').append('<p>' + 'Title: ' + memory.title + '</p>')
-    $('#view-all-memories-message').append('<p>' + 'Date of memory: ' + memory.date + '</p>')
-    $('#view-all-memories-message').append('<p>' + 'Description: ' + memory.description + '</p>')
+    $('#view-all-memories-message').append('<p>ID: ' + memory.id + '</p>')
+    $('#view-all-memories-message').append('<p>Title: ' + memory.title + '</p>')
+    $('#view-all-memories-message').append('<p>Date of memory: ' + memory.date + '</p>')
+    $('#view-all-memories-message').append('<p>Description: ' + memory.description + '</p>')
   })
   store.memories = responseData.memories
   // console.log(store.memories)
