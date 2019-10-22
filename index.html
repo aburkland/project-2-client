@@ -49,7 +49,7 @@
       <form id="create-memory" class="no-start-display"> <!--add class no-display-->
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
       <!-- put min or max for date below -->
-      <input type="date" name="memory[date]" min="1900-01-01" required>
+      <input type="date" name="memory[date]" min="1900-01-01" class="today-date-max" required>
       <br>
       <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="create-memory" placeholder="Your decent memory goes here" required></textarea>
       <br>
@@ -72,7 +72,7 @@
       <input type="number" min="1" name="memory[id]" placeholder="Memory ID" required>
       <input type="text" name="memory[title]" placeholder="Name your memory" required>
       <!-- put min and max for date below -->
-      <input type="date" name="memory[date]" min="1900-01-01" required>
+      <input type="date" name="memory[date]" min="1900-01-01" class="today-date-max" required>
       <br>
       <textarea maxlength="3000" rows="4" cols="50" name="memory[description]" form="update-memory" placeholder="Your decent memory update goes here" required></textarea>
       <br>
