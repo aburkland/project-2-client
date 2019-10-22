@@ -12,7 +12,7 @@ For my second project as part of General Assembly's Software Engineering Immersi
 I built a full-stack application single page application that allows a user to sign up, sign in, change password, sign out, create a memory, update a memory, view all of their saved memories, and delete a memory.
 
 I began by reviewing the project requirements and project documentation. I then
-created my wireframes and user stories to help guide me in my project schedule.
+created my entity relationship diagram, wireframes, and user stories to help guide me in my project schedule.
 I started by setting up my API with Rails, scaffolding my Memories resource, using curl scripts to test my endpoints. My resource controller is inheriting from the ProtectedController. I then moved on to developing my front-end, testing along the way in order to identify bugs and incrementally update code to address the errors.
 
 ## Technologies Used
