@@ -13,7 +13,8 @@ I built a full-stack application single page application that allows a user to s
 
 I began by reviewing the project requirements and project documentation. I then
 created my entity relationship diagram, wireframes, and user stories to help guide me in my project schedule.
-I started by setting up my API with Rails, scaffolding my Memories resource, using curl scripts to test my endpoints. My resource controller is inheriting from the ProtectedController. I then moved on to developing my front-end, testing along the way in order to identify bugs and incrementally update code to address the errors.
+
+I started by setting up my API with Rails, scaffolding my Memories resource, using curl scripts to test my endpoints. My resource controller is inheriting from the ProtectedController. A user can have many memories, and memories belong to a user. I then moved on to developing my front-end, testing along the way in order to identify bugs and incrementally update code to address the errors.
 
 ## Technologies Used
 - Javascript
@@ -43,7 +44,6 @@ I started by setting up my API with Rails, scaffolding my Memories resource, usi
 
 ## Unsolved Problems for Future Fixes
 I would like to transform the JSON date string to be more readable for the client.
-I would also like to set a maximum of today's date for the memory input fields, since a memory record should not have a future date.
 
 ## [License](LICENSE)
 
