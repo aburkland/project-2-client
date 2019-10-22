@@ -72,7 +72,7 @@ const onGetAllMemoriesFailure = function () {
 const onUpdateMemorySuccess = function (responseData) {
   // successMessage('Memory updated successfully!')
   // $('#update-memory-message').txt('Memory updated successfully')
-  $('#update-memory-message').text('Memory updated successfully')
+  $('#update-memory-message').text('Memory updated successfully. Retrieve your memories to view update.')
   setTimeout(function () {
     $('#update-memory-message').text('')
   }, 4000)
