@@ -3,7 +3,7 @@
 # GA SEI05 Project 2 - Memory Saver
 
 - [Link to Front End Repo](https://github.com/aburkland/project-2-client)
-- [Link to Front End Deployed Site]()
+- [Link to Front End Deployed Site](https://aburkland.github.io/project-2-client/)
 - [Link to API Repo](https://github.com/aburkland/project_2_api)
 - [Link to Deployed API](https://desolate-badlands-44499.herokuapp.com)
 
