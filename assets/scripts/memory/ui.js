@@ -40,7 +40,7 @@ const onGetAllMemoriesSuccess = function (responseData) {
   $('#view-all-memories-message').text('')
   // if there are no memories, send a message to create a memory
   if (responseData.memories.length === 0) {
-    $('#view-all-memories-message').text('Looks like you have ZERO good memories. Better create one so you can bask in it!')
+    $('#view-all-memories-message').text('Looks like you have zero saved memories. Better create one so you can bask in it!')
     $('#view-all-memories-message').addClass('failure')
     $('#view-all-memories-message').append('<p></p>')
     setTimeout(function () {
@@ -91,7 +91,7 @@ const onUpdateMemoryFailure = function () {
 }
 
 const onDeleteMemorySuccess = function (responseData) {
-  $('#delete-memory-message').text('Memory deleted successfully. Please replace before depression takes over.')
+  $('#delete-memory-message').text('Memory deleted successfully. Retrieve your memories to verify deletion.')
   $('#delete-memory-message').removeClass('failure').addClass('success')
   setTimeout(function () {
     $('#delete-memory-message').text('')
