@@ -23,10 +23,11 @@ const failureMessage = function (newText) {
 }
 
 const onCreateMemorySuccess = function (responseData) {
-  successMessage('New memory created successfully!')
+  successMessage('New memory created successfully! View all memories to see your addition.')
   store.memory = responseData.memory
   // console.log(store.memory)
   $('#create-memory').trigger('reset')
+  $('#view-all-memories-message').html('')
   // console.log(responseData)
 }
 
@@ -78,6 +79,7 @@ const onUpdateMemorySuccess = function (responseData) {
   }, 4000)
   $('#update-memory-message').removeClass('failure').addClass('success')
   $('#update-memory').trigger('reset')
+  $('#view-all-memories-message').html('')
 }
 
 const onUpdateMemoryFailure = function () {
@@ -97,6 +99,7 @@ const onDeleteMemorySuccess = function (responseData) {
     $('#delete-memory-message').text('')
   }, 4000)
   $('#delete-memory').trigger('reset')
+  $('#view-all-memories-message').html('')
 }
 const onDeleteMemoryFailure = function () {
   $('#delete-memory-message').text('Memory deletion failed')
