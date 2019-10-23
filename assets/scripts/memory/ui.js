@@ -39,6 +39,13 @@ const onCreateMemoryFailure = function () {
 const onGetAllMemoriesSuccess = function (responseData) {
   // clear all text before showing memories or memories messaging
   $('#view-all-memories-message').text('')
+
+  // how to get date to set in readable format
+  responseData.memories = responseData.memories.map(memory => {
+    memory.date = new Date(memory.date).toLocaleDateString()
+    return memory
+  })
+
   // if there are no memories, send a message to create a memory
   if (responseData.memories.length === 0) {
     $('#view-all-memories-message').text('Looks like you have zero saved memories. Better create one so you can bask in it!')
