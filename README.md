@@ -24,7 +24,7 @@ I started by setting up my API with Rails, scaffolding my Memories resource, usi
 - SASS
 - Bootstrap
 - Ruby on Rails
-- postgreSQL
+- PostgreSQL
 
 ## Entity Relationship Diagrams
 ![memory saver ERD](https://live.staticflickr.com/65535/48938048816_a215765843_k.jpg "MemorySaver ERD")
