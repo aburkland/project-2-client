@@ -1,0 +1,15 @@
+<div class="memories-list-container">
+   <!-- <h2>Memories: </h2> -->
+   <ul id="memories-unordered-list">
+   {{#each memories as |memory|}}
+     <div>
+       ID: {{memory.id}}
+       <br>
+       Date: {{memory.date}}
+       <br>
+       Description: {{memory.description}}
+     </div>
+     <br>
+   {{/each}}
+   </ul>
+</div>
